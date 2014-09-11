@@ -3,11 +3,10 @@ package List::Functions::Perl;
 use 5.008;
 use strict;
 use warnings;
-
 use List::Functions;
 
 our $VERSION = '0.01';
-our @ISA = qw(List::Functions);
+our @ISA     = qw(List::Functions);
 
 # TODO: the regex containing func|method should either reuse what
 # Padre has in PPIx::EditorTools::Outline or copy the list from there
