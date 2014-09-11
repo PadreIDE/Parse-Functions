@@ -37,7 +37,7 @@ sub find {
 
 	my @functions = grep { defined $_ } $text =~ /$sub_search_re/g;
 
-	return $self->sort_functions( \@functions, $sort );
+	return @{ $self->sort_functions( \@functions, $sort ) };
 }
 
 1;

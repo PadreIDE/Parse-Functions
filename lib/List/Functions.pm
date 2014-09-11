@@ -78,6 +78,12 @@ sub sort_functions {
 	return \@sorted;
 }
 
+# Show an empty function list by default
+sub find {
+	return ();
+}
+
+
 1;
 
 # Copyright 2008-2014 The Padre development team as listed in Padre.pm.

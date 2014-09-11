@@ -41,7 +41,7 @@ SCOPE: {
 
 	# Check the result of the parsing
 	is_deeply(
-		$lf->find($code),
+		[ $lf->find($code) ],
 		[   qw{
 				_bar
 				foo1
@@ -73,7 +73,7 @@ SCOPE: {
 
 	# Check the result of the parsing
 	is_deeply(
-		$lf->find($code, 'alphabetical'),
+		[ $lf->find($code, 'alphabetical') ],
 		[   qw{
 				backwards
 				_backwards
@@ -105,7 +105,7 @@ SCOPE: {
 
 	# Check the result of the parsing
 	is_deeply(
-		$lf->find($code, 'alphabetical_private_last'),
+		[ $lf->find($code, 'alphabetical_private_last') ],
 		[   qw{
 				backwards
 				foo1
