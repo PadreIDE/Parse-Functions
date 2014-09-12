@@ -10,24 +10,20 @@ our @ISA     = qw(Parse::Functions);
 
 ######################################################################
 
-my $n = "\\cM?\\cJ";
-our $function_search_re = qr/
+sub function_re {
+	my ($self) = @_;
+
+	my $newline = $self->newline;
+	return qr/
 		(?:
 			=begin.*?=end
 			|
-			(?:^|$n)\s*
+			(?:^|$newline)\s*
 			(?:
 				(?:def)\s+(\w+)
 			)
 		)
 	/sx;
-
-sub find {
-	my ($self, $text, $sort) = @_;
-
-	my @functions = grep { defined $_ } $text =~ /$function_search_re/g;
-
-	return @{ $self->sort_functions( \@functions, $sort ) };
 }
 
 1;
