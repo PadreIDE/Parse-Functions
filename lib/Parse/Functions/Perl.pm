@@ -14,9 +14,12 @@ our @ISA     = qw(Parse::Functions);
 # code and then we'll see if we reuse or copy paste.
 
 # recognize newline even if encoding is not the platform default (will not work for MacOS classic)
-my $newline = qr{\cM?\cJ};
+sub newline { qr{\cM?\cJ} };
 
 sub function_re {
+	my ($self) = @_;
+
+	my $newline = $self->newline;
 	return qr{
 		(?:
 			${newline}__(?:DATA|END)__\b.*
