@@ -13,9 +13,6 @@ our @ISA     = qw(Parse::Functions);
 # for now let's leave it as it is and focus on improving the Outline
 # code and then we'll see if we reuse or copy paste.
 
-# recognize newline even if encoding is not the platform default (will not work for MacOS classic)
-sub newline { qr{\cM?\cJ} };
-
 sub function_re {
 	my ($self) = @_;
 
