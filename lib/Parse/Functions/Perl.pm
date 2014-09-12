@@ -16,7 +16,8 @@ our @ISA     = qw(Parse::Functions);
 # recognize newline even if encoding is not the platform default (will not work for MacOS classic)
 my $newline = qr{\cM?\cJ};
 
-our $sub_search_re = qr{
+sub function_re {
+	return qr{
 		(?:
 			${newline}__(?:DATA|END)__\b.*
 			|
@@ -30,11 +31,14 @@ our $sub_search_re = qr{
 			)
 		)
 	}sx;
+}
 
 sub find {
 	my ($self, $text, $sort) = @_;
 
-	my @functions = grep { defined $_ } $text =~ /$sub_search_re/g;
+	my $function_re = $self->function_re;
+
+	my @functions = grep { defined $_ } $text =~ /$function_re/g;
 
 	return @{ $self->sort_functions( \@functions, $sort ) };
 }
