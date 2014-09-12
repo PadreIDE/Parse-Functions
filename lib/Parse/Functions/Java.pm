@@ -10,9 +10,11 @@ our @ISA     = qw(Parse::Functions);
 
 ######################################################################
 
-my $newline =
-	qr{\cM?\cJ}; # recognize newline even if encoding is not the platform default (will not work for MacOS classic)
-my $method_search_regex = qr{
+sub function_re {
+	my ($self) = @_;
+
+	my $newline = $self->newline;
+	return qr{
 			/\*.+?\*/          # block comment
 			|
 			\/\/.+?$newline    # line comment
@@ -34,13 +36,6 @@ my $method_search_regex = qr{
 			  \(.*?\)           # parentheses around the parameters
 			)
 	}sx;
-
-sub find {
-	my ($self, $text, $sort) = @_;
-
-	my @functions = grep { defined $_ } $text =~ /$method_search_regex/g;
-
-	return @{ $self->sort_functions( \@functions, $sort ) };
 }
 
 1;
