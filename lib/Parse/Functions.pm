@@ -81,11 +81,19 @@ sub sort_functions {
 # recognize newline even if encoding is not the platform default (will not work for MacOS classic)
 sub newline { qr{\cM?\cJ} };
 
-
-# Show an empty function list by default
 sub find {
-	return ();
+	my ($self, $text, $sort) = @_;
+
+	# Show an empty function list by default
+	return () if not $text;
+
+	my $function_re = $self->function_re;
+
+	my @functions = grep { defined $_ } $text =~ /$function_re/g;
+
+	return @{ $self->sort_functions( \@functions, $sort ) };
 }
+
 
 
 1;

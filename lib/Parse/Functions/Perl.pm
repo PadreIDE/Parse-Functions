@@ -33,16 +33,6 @@ sub function_re {
 	}sx;
 }
 
-sub find {
-	my ($self, $text, $sort) = @_;
-
-	my $function_re = $self->function_re;
-
-	my @functions = grep { defined $_ } $text =~ /$function_re/g;
-
-	return @{ $self->sort_functions( \@functions, $sort ) };
-}
-
 1;
 
 # Copyright 2008-2014 The Padre development team as listed in Padre.pm.
