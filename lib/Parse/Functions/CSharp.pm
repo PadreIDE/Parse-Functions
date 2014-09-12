@@ -5,7 +5,7 @@ use strict;
 use warnings;
 use Parse::Functions;
 
-our $VERSION = '1.01';
+our $VERSION = '0.01';
 our @ISA     = qw(Parse::Functions);
 
 ######################################################################
