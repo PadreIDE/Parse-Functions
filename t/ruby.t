@@ -8,7 +8,7 @@ use Test::More;
 
 plan( tests => 6 );
 
-use List::Functions::Ruby ();
+use Parse::Functions::Ruby ();
 
 # Sample code we will be parsing
 my $code = <<'END_RUBY';
@@ -35,7 +35,7 @@ SCOPE: {
 
 	# Create the function list parser
 	my $lf = new_ok(
-		'List::Functions::Ruby',
+		'Parse::Functions::Ruby',
 	);
 
 	# Check the result of the parsing
@@ -63,7 +63,7 @@ SCOPE: {
 
 	# Create the function list parser
 	my $lf = new_ok(
-		'List::Functions::Ruby',
+		'Parse::Functions::Ruby',
 	);
 
 	# Check the result of the parsing
@@ -91,7 +91,7 @@ SCOPE: {
 
 	# Create the function list parser
 	my $lf = new_ok(
-		'List::Functions::Ruby',
+		'Parse::Functions::Ruby',
 	);
 
 	# Check the result of the parsing

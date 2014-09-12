@@ -8,10 +8,10 @@ use Test::More;
 
 plan( tests => 2 );
 
-use List::Functions ();
+use Parse::Functions ();
 
 my $lf = new_ok(
-	'List::Functions',
+	'Parse::Functions',
 );
 
 is_deeply [ $lf->find() ], [], 'empty list';

@@ -8,7 +8,7 @@ use Test::More;
 
 plan( tests => 6 );
 
-use List::Functions::Python ();
+use Parse::Functions::Python ();
 
 # Sample code we will be parsing
 my $code = <<'END_PYTHON';
@@ -34,7 +34,7 @@ SCOPE: {
 
 	# Create the function list parser
 	my $lf = new_ok(
-		'List::Functions::Python',
+		'Parse::Functions::Python',
 	);
 
 	# Check the result of the parsing
@@ -62,7 +62,7 @@ SCOPE: {
 
 	# Create the function list parser
 	my $lf = new_ok(
-		'List::Functions::Python',
+		'Parse::Functions::Python',
 	);
 
 	# Check the result of the parsing
@@ -90,7 +90,7 @@ SCOPE: {
 
 	# Create the function list parser
 	my $lf = new_ok(
-		'List::Functions::Python',
+		'Parse::Functions::Python',
 	);
 
 	# Check the result of the parsing

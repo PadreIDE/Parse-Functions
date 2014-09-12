@@ -8,7 +8,7 @@ use Test::More;
 
 plan( tests => 6 );
 
-use List::Functions::CSharp ();
+use Parse::Functions::CSharp ();
 
 # Sample code we will be parsing
 my $code = <<'END_CS';
@@ -59,7 +59,7 @@ SCOPE: {
 
 	# Create the function list parser
 	my $lf = new_ok(
-		'List::Functions::CSharp',
+		'Parse::Functions::CSharp',
 	);
 
 	# Check the result of the parsing
@@ -93,7 +93,7 @@ SCOPE: {
 
 	# Create the function list parser
 	my $lf = new_ok(
-		'List::Functions::CSharp',
+		'Parse::Functions::CSharp',
 	);
 
 	# Check the result of the parsing
@@ -127,7 +127,7 @@ SCOPE: {
 
 	# Create the function list parser
 	my $lf = new_ok(
-		'List::Functions::CSharp',
+		'Parse::Functions::CSharp',
 	);
 
 	# Check the result of the parsing

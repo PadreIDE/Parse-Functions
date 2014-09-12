@@ -8,7 +8,7 @@ use Test::More;
 
 plan( tests => 6 );
 
-use List::Functions::Java ();
+use Parse::Functions::Java ();
 
 # Sample code we will be parsing
 my $code = <<'END_JAVA';
@@ -55,7 +55,7 @@ SCOPE: {
 
 	# Create the function list parser
 	my $lf = new_ok(
-		'List::Functions::Java'
+		'Parse::Functions::Java'
 	);
 
 	# Check the result of the parsing
@@ -86,7 +86,7 @@ SCOPE: {
 
 	# Create the function list parser
 	my $lf = new_ok(
-		'List::Functions::Java'
+		'Parse::Functions::Java'
 	);
 
 	# Check the result of the parsing
@@ -117,7 +117,7 @@ SCOPE: {
 
 	# Create the function list parser
 	my $lf = new_ok(
-		'List::Functions::Java'
+		'Parse::Functions::Java'
 	);
 
 	# Check the result of the parsing

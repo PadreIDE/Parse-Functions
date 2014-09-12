@@ -1,15 +1,14 @@
-package List::Functions::Java;
+package Parse::Functions::Java;
 
 use 5.008;
 use strict;
 use warnings;
-use List::Functions;
+use Parse::Functions;
 
 our $VERSION = '0.01';
-our @ISA     = qw(List::Functions);
+our @ISA     = qw(Parse::Functions);
 
 ######################################################################
-# Padre::Task::FunctionList Methods
 
 my $newline =
 	qr{\cM?\cJ}; # recognize newline even if encoding is not the platform default (will not work for MacOS classic)

@@ -8,7 +8,7 @@ use Test::More;
 
 plan( tests => 6 );
 
-use List::Functions::Perl ();
+use Parse::Functions::Perl ();
 
 # Sample code we will be parsing
 my $code = <<'END_PERL';
@@ -36,7 +36,7 @@ SCOPE: {
 
 	# Create the function list parser
 	my $lf = new_ok(
-		'List::Functions::Perl',
+		'Parse::Functions::Perl',
 	);
 
 	# Check the result of the parsing
@@ -68,7 +68,7 @@ SCOPE: {
 
 	# Create the function list parser
 	my $lf = new_ok(
-		'List::Functions::Perl',
+		'Parse::Functions::Perl',
 	);
 
 	# Check the result of the parsing
@@ -100,7 +100,7 @@ SCOPE: {
 
 	# Create the function list parser
 	my $lf = new_ok(
-		'List::Functions::Perl',
+		'Parse::Functions::Perl',
 	);
 
 	# Check the result of the parsing

@@ -1,12 +1,12 @@
-package List::Functions::Perl;
+package Parse::Functions::Perl;
 
 use 5.008;
 use strict;
 use warnings;
-use List::Functions;
+use Parse::Functions;
 
 our $VERSION = '0.01';
-our @ISA     = qw(List::Functions);
+our @ISA     = qw(Parse::Functions);
 
 # TODO: the regex containing func|method should either reuse what
 # Padre has in PPIx::EditorTools::Outline or copy the list from there

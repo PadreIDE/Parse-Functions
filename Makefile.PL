@@ -8,10 +8,10 @@ use inc::Module::Install 1.06;
 # WON'T load modules to determine the version.
 configure_requires 'ExtUtils::MakeMaker' => '6.52';
 
-name 'List-Functions';
+name 'Parse-Functions';
 license 'perl';
 author 'Gabor Szabo C<szabgab@cpan.org>';
-all_from 'lib/List/Functions.pm';
+all_from 'lib/Parse/Functions.pm';
 requires 'perl' => '5.008005';
 
 # General dependencies
@@ -19,8 +19,8 @@ test_requires 'Test::More'        => '0.88';
 
 no_index 'directory' => qw{ t xt eg share inc privinc };
 homepage 'http://padre.perlide.org/';
-bugtracker 'https://github.com/PadreIDE/List-Functions/issues';
-repository 'https://github.com/PadreIDE/List-Functions';
+bugtracker 'https://github.com/PadreIDE/Parse-Functions/issues';
+repository 'https://github.com/PadreIDE/Parse-Functions';
 
 WriteAll;
 

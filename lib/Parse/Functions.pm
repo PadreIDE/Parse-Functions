@@ -1,4 +1,4 @@
-package List::Functions;
+package Parse::Functions;
 use strict;
 use warnings;
 
@@ -6,11 +6,11 @@ our $VERSION = '0.01';
 
 =head1 NAME
 
-List::Functions - list all the functions in source code
+Parse::Functions - list all the functions in source code
 
 =head1 DESCRIPTION
 
-See L<List::Functions::Perl>
+See L<Parse::Functions::Perl>
 
 =cut
 
