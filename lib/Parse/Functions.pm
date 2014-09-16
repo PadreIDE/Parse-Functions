@@ -8,9 +8,51 @@ our $VERSION = '0.01';
 
 Parse::Functions - list all the functions in source code
 
+=head1 SYNOPSIS
+
+    use Parse::Functions::Perl ();
+    my $pf = Parse::Functions::Perl->new;
+    my $functions = $pf->find($code);
+
+Where C<$code> contains some Perl code. (Probably read in using L<Path::Tiny>.)
+Returns a reference to an array.
+
+Alternatively call these to get the names sorted
+
+    $pf->find($code, 'alphabetical');
+    $pf->find($code, 'alphabetical_private_last');
+
 =head1 DESCRIPTION
 
-See L<Parse::Functions::Perl>
+=head2 sorting:
+
+=over 4
+
+=item * default
+
+As they got parsed. Probably the order they apper in the file, but it might change. Think as 'unsorted'.
+
+=item alphabetical
+
+Alphabetical (aka 'abc')
+Ignore case and leading non-word characters.
+
+=item alphabetical_private_last
+
+As above, but with "private" functions (function hat start with underscore _) last.
+
+=back
+
+=head1 COPYRIGHT
+
+Copyright 2008-2014 The Padre development team as listed in Padre.pm.
+L<http://padre.perlide.org/>
+
+=head1 LICENSE
+
+This program is free software; you can redistribute it and/or
+modify it under the same terms as Perl 5 itself.
+
 
 =cut
 
