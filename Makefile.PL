@@ -12,6 +12,7 @@ name 'Parse-Functions';
 license 'perl';
 author 'Gabor Szabo C<szabgab@cpan.org>';
 all_from 'lib/Parse/Functions.pm';
+perl_version_from 'lib/Parse/Functions.pm';
 requires 'perl' => '5.008005';
 
 # General dependencies
